@@ -1,6 +1,6 @@
-# My Software Developer Portfolio Template
+# My Software Developer Portfolio Website
 
-This repository contains a clean, modern, and responsive single-page portfolio website. It's designed specifically  to showcasemy their skills, projects, and experience to potential employers or collaborators.
+This repository contains a clean, modern, and responsive single-page portfolio website. It's designed specifically  to showcasemy my skills, projects, and experience to potential employers or collaborators.
 
 ## Project Overview
 
