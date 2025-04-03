@@ -1,0 +1,462 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #007bff; /* Blue - Adjust as needed */
+    --secondary-color: #6c757d; /* Gray */
+    --background-color: #f8f9fa; /* Light Gray */
+    --text-color: #343a40; /* Dark Gray */
+    --heading-font: 'Arial', sans-serif; /* Choose fonts */
+    --body-font: 'Georgia', serif;
+    --card-bg: #ffffff; /* White */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --nav-height: 70px; /* Define nav height for positioning */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for nav links */
+    scroll-padding-top: var(--nav-height); /* Offset scroll position */
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+    color: var(--text-color); /* Darker headings */
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; margin-bottom: 2rem; text-align: center;}
+h3 { font-size: 1.5em; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1100px; /* Limit content width */
+    margin: 0 auto; /* Center sections */
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+    padding: 0 2rem; /* Adjusted padding */
+    position: sticky; /* Keep nav at top */
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: var(--nav-height); /* Set fixed height */
+    display: flex; /* Use flex to align items vertically */
+    align-items: center; /* Center items vertically */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%; /* Ensure nav takes full width within header padding */
+    margin: 0 auto;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+#nav-links { /* Target the UL by ID */
+    list-style: none;
+    display: flex;
+}
+
+#nav-links li {
+    margin-left: 25px; /* Slightly more space */
+}
+
+#nav-links li a {
+    font-family: var(--heading-font);
+    color: var(--text-color);
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+    font-size: 1rem; /* Consistent font size */
+}
+
+#nav-links li a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* --- Hamburger Button --- */
+.hamburger {
+    display: none; /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1010; /* Ensure it's above nav links when open */
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger Animation to 'X' when active */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* --- Hero Section --- */
+#hero {
+    background-color: #e9ecef; /* Slightly different background */
+    text-align: center;
+    padding: 80px 20px;
+    min-height: calc(80vh - var(--nav-height)); /* Adjust height considering nav */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--nav-height); /* Add margin to prevent overlap with sticky nav */
+}
+/* Add margin-top to the first section *after* the header */
+main section:first-of-type {
+    margin-top: var(--nav-height);
+}
+/* OR Adjust Hero specificially if it's always first */
+/* #hero { margin-top: var(--nav-height); } */
+
+
+#hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+#hero .subtitle {
+    font-size: 1.4em;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-family: var(--heading-font);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker blue */
+    text-decoration: none;
+}
+
+/* --- About Section --- */
+#about {
+    background-color: var(--card-bg); /* White background */
+}
+
+.about-content {
+    display: flex;
+    align-items: center; /* Vertically align text and image if used */
+    gap: 30px; /* Space between text and optional image */
+}
+
+.about-text {
+    flex: 1; /* Text takes available space */
+}
+
+/* --- Skills Section --- */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    text-align: left;
+}
+
+.skill-category {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.skill-category h3 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category ul li {
+    margin-bottom: 8px;
+    padding: 5px;
+    background-color: #e9ecef; /* Light background for skill items */
+    border-radius: 4px;
+}
+
+
+/* --- Projects Section --- */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden; /* Keep image corners rounded */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area, might crop */
+    /* background-color: #ccc;  Fallback background */
+}
+
+.project-card h3 {
+    padding: 15px 15px 5px 15px;
+}
+
+.project-card p {
+    padding: 0 15px;
+    flex-grow: 1; /* Allow description to take up space */
+    font-size: 0.95em;
+}
+.project-card p.technologies {
+    font-size: 0.85em;
+    color: var(--secondary-color);
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+.project-links {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    margin-top: auto; /* Push links to the bottom */
+}
+
+.project-links .button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Ensure no underline */
+}
+
+.project-links .button:hover {
+    background-color: #0056b3;
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* --- Contact Section --- */
+#contact {
+    background-color: #e9ecef; /* Light background */
+    text-align: center;
+}
+
+.contact-links {
+    margin-top: 2rem;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-button:hover {
+    background-color: #5a6268; /* Darker gray */
+    text-decoration: none;
+}
+/* Optional Contact Form Styling */
+/*
+#contact-form {
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+    text-align: left;
+}
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+#contact-form button {
+     display: block;
+     width: auto;
+     margin: 0 auto; /* Center button */
+     /* Inherit .button styles or create specific ones */
+/* } */
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--text-color); /* Dark background */
+    color: var(--background-color); /* Light text */
+    font-size: 0.9em;
+    margin-top: 40px; /* Space above footer */
+}
+
+/* --- Responsiveness --- */
+
+/* Mobile Styles - Target smaller screens */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+
+    /* Adjust Nav layout for Mobile */
+    #nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack vertically */
+        width: 100%;
+        position: absolute; /* Position below header */
+        top: var(--nav-height); /* Start below the header */
+        left: 0;
+        background-color: var(--card-bg); /* Background for dropdown */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+        padding: 1rem 0; /* Add some padding */
+        /* Add transition for smooth opening/closing */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+
+    #nav-links.active {
+        display: flex; /* Need display:flex for flex-direction to work */
+        max-height: 500px; /* Or large enough height to show all items */
+    }
+
+    #nav-links li {
+        margin-left: 0; /* Remove left margin */
+        width: 100%;
+        text-align: center; /* Center text */
+    }
+
+    #nav-links li a {
+        padding: 15px 20px; /* Larger clickable area */
+        display: block; /* Make link take full width */
+        border-bottom: 1px solid #eee; /* Separator */
+    }
+     #nav-links li:last-child a {
+         border-bottom: none; /* Remove border from last item */
+     }
+
+    #nav-links li a:hover {
+        background-color: #f1f1f1; /* Hover effect */
+        color: var(--primary-color);
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    /* Ensure hero section clears sticky nav properly on mobile */
+    #hero {
+        min-height: calc(70vh - var(--nav-height));
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack image and text */
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .projects-container {
+         grid-template-columns: 1fr; /* Single column for projects */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
+
+    header {
+        padding: 0 1rem; /* Adjust padding */
+    }
+    :root {
+        --nav-height: 60px; /* Slightly smaller nav on very small screens */
+    }
+
+    #hero .subtitle {
+        font-size: 1.1em;
+    }
+
+    .cta-button, .project-links .button, .contact-button {
+        padding: 10px 18px;
+        font-size: 1em;
+    }
+}

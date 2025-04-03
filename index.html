@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Peter Nzingu - Software Developer Portfolio">
+    <title>Peter Nzingu - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Peter Nzingu</div>
+            <ul id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="hamburger-btn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+             <div class="hero-content">
+                 <h1>Hi, I'm Peter Nzingu</h1>
+                 <p class="subtitle">Junior Full-Stack developer</p>
+                 <p>I build creative and functional web applications. Welcome to my portfolio!</p>
+                 <a href="#projects" class="cta-button">View My Work</a>
+                  </div>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                 <div class="about-text">
+                    <p>
+                        Hello! I'm Peter Nzingu, a passionate software developer based in Nairobi Kenya. I specialize in backend, frontend development with Vue, backend with Laravel and cloud technologies.
+                    </p>
+                    <p>
+                        I enjoy turning complex problems into simple, beautiful, and intuitive designs. I love learning new technologies and constantly strive to improve my skills. When I'm not coding, you might find me hiking, reading, exploring tech meetups.
+                    </p>
+                    <p>
+                        Feel free to explore my projects and get in touch!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>JavaScript (ES6+)</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Python</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks/Libraries</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>Laravel</li>
+                        <li>Vue</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools/Platforms</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                        <li>AWS</li>
+                        <li>Jira</li>
+                    </ul>
+                </div>
+                 <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>PostgreSQL / MySQL</li>
+                        <li>AWS S3</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+
+                <div class="project-card">
+                    <img src="images/project1.jpg" alt="Project 1 Screenshot"> <h3>Simple Product CRUD using Node js and MySQL</h3>
+                    <p>A web application that allows users to create, read, update, and delete product information. It demonstrates the implementation of a basic CRUD functionality using Node.js for the backend and MySQL as the database.</p>
+                    <p class="technologies"><strong>Technologies:</strong> Node.js, MySQL</p>
+                    <div class="project-links">
+                        <a href="https://github.com/peterkyalo/crud-node-mysql.git" target="_blank" class="button">Live Demo</a>
+                        <a href="https://github.com/peterkyalo/crud-node-mysql.git" target="_blank" class="button">GitHub Repo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                     <img src="images/project2.jpg" alt="Project 2 Screenshot"> <h3>Role Based Access Control Using Laravel Spatie</h3>
+                    <p>A web application implementing role-based access control (RBAC) using the Laravel Spatie package. It allows for managing user roles and permissions efficiently. Built with Laravel,MySQL, HTML, CSS, and Bootstrap.</p>
+                     <p class="technologies"><strong>Technologies:</strong> Laravel, Laravel Spatie, MySQL, Html, Bootstrap</p>
+                    <div class="project-links">
+                        <a href="https://github.com/peterkyalo/RBAC-Laravel-Spatie" target="_blank" class="button">Live Demo</a>
+                        <a href="https://github.com/peterkyalo/RBAC-Laravel-Spatie" target="_blank" class="button">GitHub Repo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                     <img src="images/project3.jpg" alt="Project 3 Screenshot"> <h3>Online Hotel Reservation</h3>
+                    <p>A web application for booking hotel rooms online, featuring a user-friendly interface for browsing, selecting, and reserving rooms. Built using the Laravel framework, MySQL, HTML, CSS, and Bootstrap</p>
+                    <p class="technologies"><strong>Technologies:</strong>Laravel Framework, MySQL, HTML, CSS, Bootstrap</p>
+                    <div class="project-links">
+                        <a href="[Link to Live Demo/Site]" target="_blank" class="button">Live Demo</a>
+                        <a href="https://github.com/peterkyalo/online-hotel-room-booking" target="_blank" class="button">GitHub Repo</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm currently open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:peterkyalo69@gmail.com" class="contact-button">Email Me</a>
+                <a href="https://www.linkedin.com/in/peterkyalo/" target="_blank" class="contact-button">LinkedIn</a>
+                <a href="https://github.com/peterkyalo" target="_blank" class="contact-button">GitHub</a>
+                 </div>
+             </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Peter Nzingu. All rights reserved.</p>
+        </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
